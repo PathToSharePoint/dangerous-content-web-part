@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "d26203d2-bc92-4046-9e2b-a81ff9a32b26",
+  "alias": "DangerousContentWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportsFullBleed": true,
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage", "TeamsTab"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "Dangerous Content" },
+    "description": { "default": "Dangerous Content description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Dangerous Content"
+    }
+  }]
+}

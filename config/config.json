@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "dangerous-content-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dangerousContent/DangerousContentWebPart.js",
+          "manifest": "./src/webparts/dangerousContent/DangerousContentWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DangerousContentWebPartStrings": "lib/webparts/dangerousContent/loc/{locale}.js"
+  }
+}
