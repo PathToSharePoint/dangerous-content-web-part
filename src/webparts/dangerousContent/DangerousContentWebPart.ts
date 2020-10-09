@@ -26,18 +26,19 @@ export interface IDangerousContentWebPartProps {
 
 export default class DangerousContentWebPart extends BaseClientSideWebPart<IDangerousContentWebPartProps> {
   
-    protected async onInit(): Promise<void> {
+    // protected async onInit(): Promise<void> {
   
-      await super.onInit();
+    //   await super.onInit();
     
-      // other init code may be present
+    //   // other init code may be present
     
-      sp.setup(this.context);
-    }
+    //   sp.setup(this.context);
+    // }
   public render(): void {
     const element: React.ReactElement<IDangerousContentProps> = React.createElement(
       DangerousContent,
       {
+        ctx: this.context,
         mode: this.properties.mode,
         description: this.properties.description,
         url: this.properties.url
@@ -51,9 +52,9 @@ export default class DangerousContentWebPart extends BaseClientSideWebPart<IDang
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  protected get dataVersion(): Version {
-    return Version.parse('0.5.0');
-  }
+  // protected get dataVersion(): Version {
+  //   return Version.parse('0.5.0');
+  // }
 
   private sanitizeModes: IPropertyPaneDropdownOption[] = [{key:"Dangerous",text:"Dangerous"}];
 
