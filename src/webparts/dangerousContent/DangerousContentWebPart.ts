@@ -13,11 +13,6 @@ import * as strings from 'DangerousContentWebPartStrings';
 import DangerousContent from './components/DangerousContent';
 import { IDangerousContentProps } from './components/IDangerousContentProps';
 
-import { sp } from "@pnp/sp";
-import "@pnp/sp/webs";
-import "@pnp/sp/files";
-import "@pnp/sp/folders";
-
 export interface IDangerousContentWebPartProps {
   mode: string;
   description: string;
@@ -25,20 +20,13 @@ export interface IDangerousContentWebPartProps {
 }
 
 export default class DangerousContentWebPart extends BaseClientSideWebPart<IDangerousContentWebPartProps> {
-  
-    // protected async onInit(): Promise<void> {
-  
-    //   await super.onInit();
-    
-    //   // other init code may be present
-    
-    //   sp.setup(this.context);
-    // }
+
   public render(): void {
     const element: React.ReactElement<IDangerousContentProps> = React.createElement(
       DangerousContent,
       {
         ctx: this.context,
+        displayMode: this.displayMode,
         mode: this.properties.mode,
         description: this.properties.description,
         url: this.properties.url
@@ -51,10 +39,6 @@ export default class DangerousContentWebPart extends BaseClientSideWebPart<IDang
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
-
-  // protected get dataVersion(): Version {
-  //   return Version.parse('0.5.0');
-  // }
 
   private sanitizeModes: IPropertyPaneDropdownOption[] = [{key:"Dangerous",text:"Dangerous"}];
 

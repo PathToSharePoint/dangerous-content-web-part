@@ -3,16 +3,16 @@
   "solution": {
     "name": "dangerous-content-client-side-solution",
     "id": "4812a36b-61a0-47e6-92e5-5edab491f8e1",
-    "version": "1.0.0.0",
+    "version": "0.9.1.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "developer": {
-      "name": "",
-      "websiteUrl": "",
-      "privacyUrl": "",
-      "termsOfUseUrl": "",
-      "mpnId": ""
+      "name": "CH",
+      "websiteUrl": "CH",
+      "privacyUrl": "CH",
+      "termsOfUseUrl": "CH",
+      "mpnId": "CH"
     }
   },
   "paths": {
